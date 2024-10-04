@@ -1,0 +1,171 @@
+/* General body styling for both login and register */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card styling (Register page) */
+.card {
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  background-color: #282828;
+  color: #fff;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Center text */
+.text-center {
+  text-align: center;
+}
+
+/* Form control group styling */
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 15px;
+  color: #f0f0f0;
+}
+
+/* Input field styling */
+.input-xlarge, input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 2px solid #f39c12;
+  border-radius: 6px;
+  background-color: #444;
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.input-xlarge:focus, input:focus {
+  border-color: #e67e22;
+  outline: none;
+}
+
+/* Button styles */
+.btn-success, button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover, button:hover {
+  background-color: #e67e22;
+}
+
+/* Login page specific styling */
+.login-body {
+  background-color: #f4f4f9;
+  height: 100vh;
+}
+
+#legend {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text-danger {
+  color: red;
+  font-size: 14px;
+}
+
+/* Register page specific styling */
+.register-body {
+  background-color: #1e1e1e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 576px) {
+  .card {
+      padding: 25px;
+  }
+
+  .text-center {
+      font-size: 22px;
+  }
+
+  .input-xlarge {
+      padding: 10px;
+  }
+
+  .btn-success {
+      padding: 12px;
+      font-size: 16px;
+  }
+}
+
+/* Navbar styling */
+.navbar-dark {
+  background-color: #343a40;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+  color: #fff;
+}
+
+/* General main content */
+main {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #f39c12;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Error and success messages */
+.text-danger {
+  color: red;
+  font-size: 14px;
+}
+
+.text-success {
+  color: green;
+}
+
+/* Button links */
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: white;
+}

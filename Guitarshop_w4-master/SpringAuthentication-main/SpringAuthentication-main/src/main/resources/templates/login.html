@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html th:replace="~{/layout :: layout(~{::title}, ~{::main})}" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}"/>
+</head>
+<body class="login-body">
+    <main>
+        <form th:method="post" th:action="@{/login}" th:object="${userLoginForm}">
+            <fieldset>
+                <div id="legend">
+                    <legend>Log In</legend>
+                    <p th:text="${wrongCredential}" class="text-danger"></p>
+                </div>
+                
+                <div class="control-group">
+                    <label for="username">Username</label>
+                    <div class="controls">
+                        <input type="text" id="username" name="username" th:field="*{username}" placeholder="Enter your username" required="required">
+                    </div>
+                </div>
+                
+              
+                <div class="control-group">
+                    <label for="password">Password</label>
+                    <div class="controls">
+                        <input type="password" id="password" name="password" th:field="*{password}" placeholder="Enter your password" required="required">
+                    </div>
+                </div>
+    
+                <div class="control-group">
+                    <div class="controls">
+                        <button class="btn btn-success">Log In</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

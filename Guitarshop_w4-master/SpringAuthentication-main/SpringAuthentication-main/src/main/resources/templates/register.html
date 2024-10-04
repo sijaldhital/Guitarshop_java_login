@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html th:replace="~{/layout :: layout(~{::title}, ~{::main})}" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Register | Guitar Shop</title>
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}"/>
+</head>
+<body class="register-body">
+    <main>
+        <div class="card">
+            <h1 class="text-center">Create Your Account</h1>
+            <form class="form-horizontal" th:action="@{/register}" th:method="post" th:object="${userRegisterForm}">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="username">Username</label>
+                        <div class="controls">
+                            <input type="text" id="username" name="username" th:field="*{username}" class="input-xlarge" required="required">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="email">E-mail</label>
+                        <div class="controls">
+                            <input type="email" id="email" name="email" placeholder="Enter your email" th:field="*{email}" class="input-xlarge" required="required">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="password">Password</label>
+                        <div class="controls">
+                            <input type="password" id="password" name="password" th:field="*{password}" placeholder="Enter your password" class="input-xlarge" required="required">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="password_confirm">Confirm Password</label>
+                        <div class="controls">
+                            <input type="password" id="password_confirm" name="passwordConfirmation" placeholder="Confirm your password" class="input-xlarge" required="required">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-success">Register</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

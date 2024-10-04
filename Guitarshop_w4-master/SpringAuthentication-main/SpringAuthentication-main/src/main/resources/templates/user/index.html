@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Guitar Shop</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #343a40;
+            padding: 10px 20px;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+        /* Banner section styling */
+        .banner {
+            background-color: #282828;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .banner-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .banner h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+        }
+
+        /* Product listing section styling */
+        .products {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .products h2 {
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer section styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            margin-top: auto; /* Push footer to bottom */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="#" th:href="@{/}">Guitar Shop</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" th:href="@{/}">Home</a></li>
+            <li><a href="#" th:href="@{/products}">Products</a></li>
+            <li><a href="#" th:href="@{/about}">About Us</a></li>
+            <li><a href="#" th:href="@{/contact}">Contact</a></li>
+            <li><a href="#" th:href="@{/cart}">Cart</a></li>
+            <li><a href="/login" id="logout-Btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner Section -->
+    <header class="banner">
+        <div class="banner-content">
+            <h1>Welcome to Guitar Shop</h1>
+            <p>Every Guitar Has a Story. Find Yours.</p>
+            <a href="#" th:href="@{/products}" class="btn">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- Product Listing Section -->
+    <section class="products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <!-- Product Item -->
+            <div class="product-item">
+                <img th:src="@{/images/product1.jpeg}" alt="Acoustic Guitar">
+                <h3>Acoustic Guitar</h3>
+                <p>$400</p>
+                <a href="#" th:href="@{/cart/add/1}" class="btn">Add to Cart</a>
+            </div>
+            <!-- Product Item -->
+            <div class="product-item">
+                <img th:src="@{/images/product2.jpg}" alt="Electric Guitar">
+                <h3>Electric Guitar</h3>
+                <p>$700</p>
+                <a href="#" th:href="@{/cart/add/2}" class="btn">Add to Cart</a>
+            </div>
+            <!-- Product Item -->
+            <div class="product-item">
+                <img th:src="@{/images/product3.jpg}" alt="Amp">
+                <h3>Guitar Amp</h3>
+                <p>$800</p>
+                <a href="#" th:href="@{/cart/add/3}" class="btn">Add to Cart</a>
+            </div>
+            <!-- Product Item -->
+            <div class="product-item">
+                <img th:src="@{/images/product4.jpg}" alt="Guitar Pedal">
+                <h3>Guitar Pedal</h3>
+                <p>$499</p>
+                <a href="#" th:href="@{/cart/add/4}" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+   
