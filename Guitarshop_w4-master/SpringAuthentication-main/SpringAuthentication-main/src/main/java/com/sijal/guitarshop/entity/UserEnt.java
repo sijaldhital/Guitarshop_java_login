@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 
 
 @Entity
@@ -14,7 +15,8 @@ public class UserEnt {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "username", nullable = false, unique = true)
+    @Column(name = "username")
+    @NotNull
     private String username;  // Renamed to match form field
     private String password;
     private String email;
